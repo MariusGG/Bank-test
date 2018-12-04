@@ -18,25 +18,37 @@ Setup:
 Make sure you have ruby installed to interact with the code via a REPL like IRB.
 ```
 **Run Program**
-  * [Download/clone this repo]
-  * [Open your terminal and CD into the Directory]
-  * [Run IRB/PRY (make sure you have these setup )]
-  * [Load ./lib/account.rb into IRB/pry]
+  * Download/clone this repo
+  * Open your terminal and CD into the Directory
+  * Run IRB/PRY (make sure you have these setup )
+  * Load ./lib/account.rb into IRB/pry
 
 **Test Program**
-  * [Download/clone this repo]
-  * [Open your terminal and CD into the Directory]
-  * [Run IRB/PRY (make sure you have these setup )]
-  * [Run Rspec]
+  * Download/clone this repo
+  * Open your terminal and CD into the Directory
+  * Run IRB/PRY (make sure you have these setup )
+  * Run Rspec
 
-  ( All test are stored in the Spec folder)
+  ( All test are stored in the Spec folder )
 
-  ``IRB    
-  https://www.ruby-lang.org/en/documentation/quickstart/
-  ``
-  ``PRY
-  http://pryrepl.org/
-  ``
+  <table>
+    <tr><th>Framework</th><th>link</th>
+    <tr>
+      <th>
+        IRB
+      </th>
+      <td>
+        <a href="https://www.ruby-lang.org/en/documentation/quickstart/">https://www.ruby-lang.org/en/documentation/quickstart/</a>
+      </td>
+    </tr>
+    <tr>
+      <th>
+        PRY
+      </th>
+      <td>
+         <a href="http://pryrepl.org/">http://pryrepl.org/</a>
+      </td>
+  </table>
 
 User story:
 -------
