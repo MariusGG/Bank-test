@@ -1,6 +1,6 @@
+# frozen_string_literal: true
 
 class Account
-
   attr_reader :balance
   def initialize
     @balance = 0
@@ -15,10 +15,9 @@ class Account
   def withdraw(amount)
     raise 'Not an integer' unless amount.is_a? Numeric
     if amount > @balance
-      raise "You have Insufficient funds"
+      raise 'Insufficient funds'
     else
-    @balance -= amount
+      @balance -= amount
     end
   end
-
 end

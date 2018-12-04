@@ -10,13 +10,13 @@ describe Account do
   end
 
   describe '#deposit' do
-      it 'allows the client to deposit money' do
-        subject.deposit(100)
-        expect(subject.balance).to eq 100
-      end
-      it 'has to be an integer to deposit' do
-       expect { subject.deposit('abc') }.to raise_error('Not an integer')
-     end
+    it 'allows the client to deposit money' do
+      subject.deposit(100)
+      expect(subject.balance).to eq 100
+    end
+    it 'has to be an integer to deposit' do
+      expect { subject.deposit('abc') }.to raise_error('Not an integer')
+    end
   end
 
   describe '#withdraw' do
@@ -26,14 +26,13 @@ describe Account do
       expect(subject.balance).to eq 50
     end
     it 'has to be an integer to withdraw' do
-     expect { subject.withdraw('abc') }.to raise_error('Not an integer')
-   end
-   describe 'Insufficient funds' do
-    it 'raises an error if a client withdraws more than the current balance' do
-      subject.deposit(100)
-      expect {subject.withdraw(1000)}.to raise_error("You have Insufficient funds")
+      expect { subject.withdraw('abc') }.to raise_error('Not an integer')
+    end
+    describe 'Insufficient funds' do
+      it 'raises error if client withdraws more than the current balance' do
+        subject.deposit(100)
+        expect { subject.withdraw(1000) }.to raise_error('Insufficient funds')
+      end
     end
   end
-end
-
 end
