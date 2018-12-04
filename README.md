@@ -1,7 +1,7 @@
 # Bank_tech_test
 
-This is a week 10 challenge on tech testing by Makers.
-It is an app which a client can "deposit", "withdraw" and "print statment" on a REPL like IRB.
+This is a week 10 challenge on tech test by Makers.
+It is an app which a client can "deposit", "withdraw" and "print statement" on a REPL like IRB.
 https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
 Process
@@ -17,6 +17,25 @@ Setup:
 
 Make sure you have ruby installed to interact with the code via a REPL like IRB.
 
+## Run Program
+  • Download/clone this repo
+  • Open your terminal and CD into the Directory
+  • Run IRB/PRY (make sure you have these setup )
+  • Load ./lib/account.rb into IRB/pry
+
+
+## Test Program
+  • Download/clone this repo
+  • Open your terminal and CD into the Directory
+  • Run IRB/PRY (make sure you have these setup )
+  • Run Rspec
+
+  ( All test are stored in the Spec folder)
+
+  IRB    
+  https://www.ruby-lang.org/en/documentation/quickstart/
+  PRY
+  http://pryrepl.org/
 
 
 User story:
@@ -25,27 +44,19 @@ User story:
 ````
 As a client
 to save money,
-I would like to deposit money.
+I would like to deposit to money on my account.
 
 As a client
 to purchase goods,
-I would like to withdraw money.
+I would like to withdraw money from my account.
 
 As a client
-to see my transactions,
-I would like to print a statement.
+to track my transactions,
+I would like a printed statement with dates of transactions.
 
 ````
-
-
 
 
 Domain model
 -------
 ![Alt text](./)
-
-Testing framework
--------
-
-Rspec
-Simplecov
