@@ -14,6 +14,9 @@ describe Account do
       subject.deposit(100)
       expect(subject.balance).to eq 100
     end
+    it 'can only deposit integers' do
+     expect { subject.deposit('abc') }.to raise_error 'Not an integer'
+   end
   end
 
   describe '#withdraw' do
@@ -22,6 +25,9 @@ describe Account do
       subject.withdraw(50)
       expect(subject.balance).to eq 50
     end
+    it 'can only withdraw integers' do
+     expect { subject.withdraw('abc') }.to raise_error 'Not an integer'
+   end
   end
 
 end
