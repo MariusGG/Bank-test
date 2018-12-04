@@ -4,13 +4,6 @@ This is a week 10 challenge on tech test by Makers.
 It is an app which a client can "deposit", "withdraw" and "print statement" on a REPL like IRB.
 https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
-Process
--------
-Describe how you approached designing your solution to the problem?
-Firstly, I setup a repo on github ( https://github.com/MariusGG/Bank-test )
-Following the TDD process of writing a failing test and then passing it, I make sure to have regular commits to git. Using 'git status' to see any files that need to be committed, allows me to keep track of my work flow.
-I've found regular commits and writing testing then passing them, makes a for a better understanding of my code.
-Also following this process allows me to write clear code which is easy to change.
 
 Setup:
 -------
@@ -35,7 +28,7 @@ Make sure you have ruby installed to interact with the code via a REPL like IRB.
     <tr><th>REPL</th><th>link</th>
     <tr>
       <th>
-        IRB
+        irb
       </th>
       <td>
         <a href="https://www.ruby-lang.org/en/documentation/quickstart/">https://www.ruby-lang.org/en/documentation/quickstart/</a>
@@ -43,7 +36,7 @@ Make sure you have ruby installed to interact with the code via a REPL like IRB.
     </tr>
     <tr>
       <th>
-        PRY
+        pry
       </th>
       <td>
          <a href="http://pryrepl.org/">http://pryrepl.org/</a>
@@ -68,7 +61,14 @@ I would like a printed statement with dates of transactions.
 
 ````
 
-
 Domain model
 -------
 ![Alt text](./)
+
+Process
+-------
+Describe how you approached designing your solution to the problem?
+Firstly, I setup a repo on github ( https://github.com/MariusGG/Bank-test )
+Following the TDD process of writing a failing test and then passing it, I make sure to have regular commits to git. Using 'git status' to see any files that need to be committed, allows me to keep track of my work flow.
+I've found regular commits and writing testing then passing them, makes a for a better understanding of my code.
+Also following this process allows me to write clear code which is easy to change.
