@@ -33,10 +33,10 @@ Make sure you have ruby installed to interact with the code via a REPL like IRB.
 
   ``IRB    
   https://www.ruby-lang.org/en/documentation/quickstart/
-  ````
+  ``
   ``PRY
   http://pryrepl.org/
-  ````
+  ``
 
 User story:
 -------
