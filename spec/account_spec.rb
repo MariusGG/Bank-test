@@ -37,4 +37,13 @@ describe Account do
       end
     end
   end
+  describe 'transaction_log'
+    it 'keeping a log of transactions' do
+     account.deposit(100)
+     account.withdraw(50)
+     expect(account.log.length).to eq(2)
+     expect(account.log.first[:credit]).to eq(100)
+     expect(account.log.last[:debit]).to eq(50)
+     expect(account.balance).to eq(50)
+   end
 end
