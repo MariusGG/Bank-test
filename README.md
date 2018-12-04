@@ -32,7 +32,7 @@ Make sure you have ruby installed to interact with the code via a REPL like IRB.
   ( All test are stored in the Spec folder )
 
   <table>
-    <tr><th>Framework</th><th>link</th>
+    <tr><th>REPL</th><th>link</th>
     <tr>
       <th>
         IRB
