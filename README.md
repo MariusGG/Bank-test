@@ -14,29 +14,29 @@ Also following this process allows me to write clear code which is easy to chang
 
 Setup:
 -------
-
+```
 Make sure you have ruby installed to interact with the code via a REPL like IRB.
+```
+**Run Program**
+  * [Download/clone this repo]
+  * [Open your terminal and CD into the Directory]
+  * [Run IRB/PRY (make sure you have these setup )]
+  * [Load ./lib/account.rb into IRB/pry]
 
-## Run Program
-  • Download/clone this repo
-  • Open your terminal and CD into the Directory
-  • Run IRB/PRY (make sure you have these setup )
-  • Load ./lib/account.rb into IRB/pry
-
-
-## Test Program
-  • Download/clone this repo
-  • Open your terminal and CD into the Directory
-  • Run IRB/PRY (make sure you have these setup )
-  • Run Rspec
+**Test Program**
+  * [Download/clone this repo]
+  * [Open your terminal and CD into the Directory]
+  * [Run IRB/PRY (make sure you have these setup )]
+  * [Run Rspec]
 
   ( All test are stored in the Spec folder)
 
-  IRB    
+  ``IRB    
   https://www.ruby-lang.org/en/documentation/quickstart/
-  PRY
+  ````
+  ``PRY
   http://pryrepl.org/
-
+  ````
 
 User story:
 -------
