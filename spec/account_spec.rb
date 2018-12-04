@@ -9,4 +9,11 @@ describe Account do
     end
   end
 
+  describe '#deposit' do
+    it 'allows the client to deposit money' do
+      subject.deposit(100)
+      expect(subject.balance).to eq 100
+    end
+  end
+
 end
