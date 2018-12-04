@@ -14,8 +14,11 @@ class Account
 
   def withdraw(amount)
     raise 'Not an integer' unless amount.is_a? Numeric
-
+    if amount > @balance
+      raise "You have Insufficient funds"
+    else
     @balance -= amount
+    end
   end
 
 end
