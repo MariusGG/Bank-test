@@ -6,13 +6,13 @@ class Accountlog
   def initialize
     @log = []
   end
-  
+
   def deposit_log(amount, balance)
-    @log.push(credit: amount, balance: balance)
+    @log.push(date: Time.now.strftime('%d-%m-%y'), credit: amount, balance: balance)
   end
 
   def withdraw_log(amount, balance)
-    @log.push(debit: amount, balance: balance )
+    @log.push(date: Time.now.strftime('%d-%m-%y'), debit: amount, balance: balance )
   end
 
 end
