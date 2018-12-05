@@ -6,7 +6,6 @@ require 'accountlog'
 describe Accountlog do
   before { Timecop.freeze(Time.local(1999)) }
   after { Timecop.return }
-  
   let(:accountlog) { described_class.new }
 
   describe '#deposit_log' do

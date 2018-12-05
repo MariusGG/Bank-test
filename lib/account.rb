@@ -24,4 +24,8 @@ class Account
     end
   end
 
+  def print_log
+    puts @log_history.transaction_log
+  end
+
 end
