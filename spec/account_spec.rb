@@ -51,5 +51,14 @@ describe Account do
      expect(account.balance).to eq(50)
    end
  end
- 
+ describe 'account_statement' do
+   it 'shows a clients account statement' do
+     account.deposit(100)
+     account.withdraw(50)
+     statement = "date || credit || debit || balance\n"\
+                 "05-12-18 || 100 ||  || 100\n"\
+                 "05-12-18 ||  || 50 || 50\n"
+     expect { account.print_log }.to output(statement).to_stdout
+   end
+ end
 end
