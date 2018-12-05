@@ -13,35 +13,39 @@ Make sure you have ruby installed to interact with the code via a REPL like IRB.
 **Run Program**
   * Download/clone this repo
   * Open your terminal and CD into the Directory
+  * Install gem dependencies by running `bundle install`
   * Run IRB/PRY (make sure you have these setup )
   * Load ./lib/account.rb into IRB/pry
+
+    <table>
+      <tr><th>REPL</th><th>link</th>
+      <tr>
+        <th>
+          irb
+        </th>
+        <td>
+          <a href="https://www.ruby-lang.org/en/documentation/quickstart/">https://www.ruby-lang.org/en/documentation/quickstart/</a>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          pry
+        </th>
+        <td>
+           <a href="http://pryrepl.org/">http://pryrepl.org/</a>
+        </td>
+    </table>
 
 **Test Program**
   * Download/clone this repo
   * Open your terminal and CD into the Directory
   * Run IRB/PRY (make sure you have these setup )
   * Run Rspec
-
   ( All test are stored in the Spec folder )
 
-  <table>
-    <tr><th>REPL</th><th>link</th>
-    <tr>
-      <th>
-        irb
-      </th>
-      <td>
-        <a href="https://www.ruby-lang.org/en/documentation/quickstart/">https://www.ruby-lang.org/en/documentation/quickstart/</a>
-      </td>
-    </tr>
-    <tr>
-      <th>
-        pry
-      </th>
-      <td>
-         <a href="http://pryrepl.org/">http://pryrepl.org/</a>
-      </td>
-  </table>
+**Rspec** This was used for consistent (Red-Green) TDD approach.
+**Simplecove** This was used to get my test coverage.
+**Rubocop** This was to insure code formatting was consistent throughout.
 
 User story:
 -------
