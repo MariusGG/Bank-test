@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 require 'account'
 require 'accountlog'
 
@@ -22,7 +20,7 @@ describe Account do
     it 'has to be an integer to deposit' do
       expect { account.deposit('abc') }.to raise_error('Not an integer')
     end
-    describe 'deposit bellow zero' do
+    describe 'deposit below zero' do
       it 'raise error if deposit is less than zero' do
         expect { account.deposit(-1) }.to raise_error('Amount needs to be greater than zero')
       end
@@ -44,7 +42,7 @@ describe Account do
         expect { account.withdraw(1000) }.to raise_error('Insufficient funds')
       end
     end
-    describe 'withdraw bellow zero' do
+    describe 'withdraw below zero' do
       it 'raise error if withdraw is less than zero' do
         expect { account.withdraw(-100) }.to raise_error('Amount needs to be greater than zero')
       end
