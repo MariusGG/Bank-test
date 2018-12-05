@@ -22,6 +22,12 @@ describe Account do
     it 'has to be an integer to deposit' do
       expect { account.deposit('abc') }.to raise_error('Not an integer')
     end
+    describe 'deposit bellow zero' do
+      it 'raise error if deposit is less than zero' do
+        expect { account.deposit(-1) }.to raise_error('Amount needs to be greater than zero')
+      end
+    end
+
   end
 
   describe '#withdraw' do
@@ -37,6 +43,11 @@ describe Account do
       it 'raises error if client withdraws more than the current balance' do
         account.deposit(100)
         expect { account.withdraw(1000) }.to raise_error('Insufficient funds')
+      end
+    end
+    describe 'withdraw bellow zero' do
+      it 'raise error if withdraw is less than zero' do
+        expect { account.withdraw(-100) }.to raise_error('Amount needs to be greater than zero')
       end
     end
   end

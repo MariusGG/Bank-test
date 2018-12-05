@@ -1,6 +1,6 @@
 # Bank_tech_test
 
-This is a week 10 challenge on tech test by Makers.
+This is the week 10 tech test challenge at Makers. This project is to show my ability to 
 It is an app which a client can "deposit", "withdraw" and "print statement" on a REPL like IRB.
 https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
@@ -43,7 +43,7 @@ Make sure you have ruby installed to interact with the code via a REPL like IRB.
   * Run Rspec
   ( All test are stored in the Spec folder )
 
-**Rspec** This was used for consistent (Red-Green) TDD approach.
+**Rspec** This was used for consistent a TDD approach (Red-Green).
 **Simplecove** This was used to get my test coverage.
 **Rubocop** This was to insure code formatting was consistent throughout.
 
@@ -53,7 +53,7 @@ User story:
 ````
 As a client
 to save money,
-I would like to deposit to money on my account.
+I would like to deposit money on my account.
 
 As a client
 to purchase goods,
@@ -61,7 +61,7 @@ I would like to withdraw money from my account.
 
 As a client
 to track my transactions,
-I would like a printed statement with dates of transactions.
+I would like a printed statement with dates.
 
 ````
 
@@ -71,8 +71,7 @@ Domain model
 
 Process
 -------
-
-Firstly, I setup a repo on gitHub ( https://github.com/MariusGG/Bank-test )
-Following the TDD process of writing a failing test and then passing it, I make sure to have regular commits to git. Using 'git status' to see any files that need to be committed, allows me to keep track of my work flow.
-I've found regular commits and writing test then passing them, makes a for a better understanding of my code.
+Following the TDD process of writing a failing test and then passing it, also making sure to have regular commits to git.
+I have used 'git status' to see any files that need to be committed, which allows me to keep track of my work flow.
+I've found regular commits and writing test then passing them makes for a better understanding of my code.
 Also following this process allows me to write clear code which is easy to change.
