@@ -67,7 +67,7 @@ I would like a printed statement with dates of transactions.
 
 Domain model
 -------
-![Alt text](./)
+![Alt text](./Bank_tech_test_program.png)
 
 Process
 -------
