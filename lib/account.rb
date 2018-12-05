@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require_relative 'accountlog'
 
 class Account
@@ -9,21 +10,29 @@ class Account
   end
 
   def deposit(amount)
-    raise 'Not an integer' unless amount.is_a? Numeric
-    raise 'Amount needs to be greater than zero' if amount <= 0
+    check_integer(amount)
+    greater_than_zero(amount)
     @balance += amount
     @log_history.deposit_log(amount, @balance)
   end
 
   def withdraw(amount)
-    raise 'Not an integer' unless amount.is_a? Numeric
-    raise 'Amount needs to be greater than zero' if amount <= 0
+    check_integer(amount)
+    greater_than_zero(amount)
     if amount > @balance
       raise 'Insufficient funds'
     else
       @balance -= amount
-      @log_history.withdraw_log(amount, @balance)
     end
+    @log_history.withdraw_log(amount, @balance)
+  end
+
+  def check_integer(amount)
+    raise 'Not an integer' unless amount.is_a? Numeric
+  end
+
+  def greater_than_zero(amount)
+    raise 'Amount needs to be greater than zero' if amount <= 0
   end
 
   def print_log

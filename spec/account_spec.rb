@@ -27,7 +27,6 @@ describe Account do
         expect { account.deposit(-1) }.to raise_error('Amount needs to be greater than zero')
       end
     end
-
   end
 
   describe '#withdraw' do
