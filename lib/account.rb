@@ -10,13 +10,14 @@ class Account
 
   def deposit(amount)
     raise 'Not an integer' unless amount.is_a? Numeric
-
+    raise 'Amount needs to be greater than zero' if amount <= 0
     @balance += amount
     @log_history.deposit_log(amount, @balance)
   end
 
   def withdraw(amount)
     raise 'Not an integer' unless amount.is_a? Numeric
+    raise 'Amount needs to be greater than zero' if amount <= 0
     if amount > @balance
       raise 'Insufficient funds'
     else
