@@ -1,6 +1,6 @@
 # Bank_tech_test
 
-This is the week 10 tech test challenge at Makers. This project is to show my ability to 
+This is the week 10 tech test challenge at Makers. This project is to show my ability to
 It is an app which a client can "deposit", "withdraw" and "print statement" on a REPL like IRB.
 https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md
 
@@ -65,7 +65,7 @@ I would like a printed statement with dates.
 
 ````
 
-Domain model
+Program Example:
 -------
 ![Alt text](./Bank_tech_test_program.png)
 
