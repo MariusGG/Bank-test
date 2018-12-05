@@ -1,8 +1,8 @@
 # frozen_string_literal: true
+
 require_relative 'accountlog'
 
 class Accountlog
-
   attr_reader :log
   def initialize
     @log = []
@@ -13,7 +13,7 @@ class Accountlog
   end
 
   def withdraw_log(amount, balance)
-    @log.push(date: Time.now.strftime('%d-%m-%y'), debit: amount, balance: balance )
+    @log.push(date: Time.now.strftime('%d-%m-%y'), debit: amount, balance: balance)
   end
 
   def transaction_log

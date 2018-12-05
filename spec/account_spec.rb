@@ -3,7 +3,6 @@
 require 'account'
 require 'accountlog'
 
-
 describe Account do
   let(:log) { double :log, deposit_log: nil, withdraw_log: nil }
   let(:accountlog) { Accountlog.new }
@@ -43,22 +42,22 @@ describe Account do
   end
   describe 'transaction_log' do
     it 'keeping a log of transactions' do
-     account.deposit(100)
-     account.withdraw(50)
-     expect(accountlog.log.length).to eq(2)
-     expect(accountlog.log.first[:credit]).to eq(100)
-     expect(accountlog.log.last[:debit]).to eq(50)
-     expect(account.balance).to eq(50)
-   end
- end
- describe 'account_statement' do
-   it 'shows a clients account statement' do
-     account.deposit(100)
-     account.withdraw(50)
-     statement = "date || credit || debit || balance\n"\
-                 "05-12-18 || 100 ||  || 100\n"\
-                 "05-12-18 ||  || 50 || 50\n"
-     expect { account.print_log }.to output(statement).to_stdout
-   end
- end
+      account.deposit(100)
+      account.withdraw(50)
+      expect(accountlog.log.length).to eq(2)
+      expect(accountlog.log.first[:credit]).to eq(100)
+      expect(accountlog.log.last[:debit]).to eq(50)
+      expect(account.balance).to eq(50)
+    end
+  end
+  describe 'account_statement' do
+    it 'shows a clients account statement' do
+      account.deposit(100)
+      account.withdraw(50)
+      statement = "date || credit || debit || balance\n"\
+                  "05-12-18 || 100 ||  || 100\n"\
+                  "05-12-18 ||  || 50 || 50\n"
+      expect { account.print_log }.to output(statement).to_stdout
+    end
+  end
 end
