@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 require 'account'
+require 'accountlog'
+
 
 describe Account do
-  let(:account) { described_class.new }
+  let(:log) { double :log, deposit_log: nil, withdraw_log: nil }
+  let(:accountlog) { Accountlog.new }
+  let(:account) { Account.new(accountlog) }
 
   describe '#initialize' do
     it 'Has a balance of zero' do
@@ -37,13 +41,15 @@ describe Account do
       end
     end
   end
-  describe 'transaction_log'
+  describe 'transaction_log' do
     it 'keeping a log of transactions' do
      account.deposit(100)
      account.withdraw(50)
-     expect(account.log.length).to eq(2)
-     expect(account.log.first[:credit]).to eq(100)
-     expect(account.log.last[:debit]).to eq(50)
+     expect(accountlog.log.length).to eq(2)
+     expect(accountlog.log.first[:credit]).to eq(100)
+     expect(accountlog.log.last[:debit]).to eq(50)
      expect(account.balance).to eq(50)
    end
+ end
+ 
 end

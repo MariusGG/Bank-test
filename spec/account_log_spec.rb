@@ -6,6 +6,7 @@ require 'accountlog'
 describe Accountlog do
   before { Timecop.freeze(Time.local(1999)) }
   after { Timecop.return }
+  
   let(:accountlog) { described_class.new }
 
   describe '#deposit_log' do
@@ -21,4 +22,5 @@ describe Accountlog do
        expect(accountlog.log.last.flatten).to eq [:date, '01-01-99', :debit, 100, :balance, 200]
      end
   end
+
 end
