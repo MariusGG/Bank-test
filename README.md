@@ -71,8 +71,13 @@ Domain model
 
 Process
 -------
+<<<<<<< HEAD
 Describe how you approached designing your solution to the problem?
 Firstly, I setup a repo on gitHub ( https://github.com/MariusGG/Bank-test )
+=======
+
+Firstly, I setup a repo on github ( https://github.com/MariusGG/Bank-test )
+>>>>>>> af3d5aa8953fb428cd8bd58405a3af30fb318d0c
 Following the TDD process of writing a failing test and then passing it, I make sure to have regular commits to git. Using 'git status' to see any files that need to be committed, allows me to keep track of my work flow.
 I've found regular commits and writing test then passing them, makes a for a better understanding of my code.
 Also following this process allows me to write clear code which is easy to change.
