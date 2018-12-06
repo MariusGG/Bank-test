@@ -67,7 +67,7 @@ I would like a printed statement with dates.
 
 Program Example:
 -------
-![Alt text](./Bank_tech_test_program.png)
+![Alt text](./Program_example.png)
 
 Process
 -------
