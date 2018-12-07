@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'account'
 
 describe 'withdraw feature tests' do
@@ -11,7 +12,7 @@ describe 'withdraw feature tests' do
   end
   it 'raises error when client withdraws below zero' do
     expect { account.withdraw(-5) }
-    .to raise_error('Amount needs to be greater than zero')
+      .to raise_error('Amount needs to be greater than zero')
   end
   it 'raises error when client does not enter an integer' do
     expect { account.withdraw('abc') }

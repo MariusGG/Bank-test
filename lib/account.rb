@@ -1,7 +1,7 @@
 # frozen_string_literal: true
+
 require_relative 'accountlog'
 class Account
-
   attr_reader :balance, :log_history
   def initialize(log = Accountlog.new)
     @balance = 0
@@ -23,6 +23,7 @@ class Account
     else
       @balance -= amount
     end
+
     @log_history.withdraw_log(amount, @balance)
   end
 

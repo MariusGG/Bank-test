@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 require 'account'
 
 describe 'Withdrawal feature tests' do
