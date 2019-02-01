@@ -11,20 +11,29 @@ class Account
   def deposit(amount)
     check_integer(amount)
     greater_than_zero(amount)
-    @balance += amount
+    adjust_amount
     @log_history.deposit_log(amount, @balance)
   end
 
   def withdraw(amount)
     check_integer(amount)
     greater_than_zero(amount)
+    error_if_amount_balance(amount)
+    @log_history.withdraw_log(amount, @balance)
+  end
+
+private
+
+  def adjust_amount(amount)
+    @balance += amount
+  end
+
+  def error_if_amount_balance(amount)
     if amount > @balance
       raise 'Insufficient funds'
     else
       @balance -= amount
     end
-
-    @log_history.withdraw_log(amount, @balance)
   end
 
   def check_integer(amount)
