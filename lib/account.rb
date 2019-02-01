@@ -22,6 +22,10 @@ class Account
     @log_history.withdraw_log(amount, @balance)
   end
 
+  def print_log
+    puts @log_history.transaction_log
+  end
+
 private
 
   def adjust_amount(amount)
@@ -42,9 +46,5 @@ private
 
   def greater_than_zero(amount)
     raise 'Amount needs to be greater than zero' if amount <= 0
-  end
-
-  def print_log
-    puts @log_history.transaction_log
   end
 end

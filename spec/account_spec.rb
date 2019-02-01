@@ -4,15 +4,15 @@ require 'account'
 require 'accountlog'
 
 describe Account do
-  before { Timecop.freeze(Time.now) }
 
   let(:log) { double :log, deposit_log: nil, withdraw_log: nil }
   let(:accountlog) { Accountlog.new }
   let(:account) { Account.new(accountlog) }
 
-  before do
-  allow(Time).to receive(:now).and_return(Time.mktime(06-12-18))
-  end
+  #
+  # before do
+  # allow(Time).to receive(:now).and_return(Time.mktime(18, 12, 06))
+  # end
 
 
   describe '#initialize' do
@@ -68,18 +68,17 @@ describe Account do
     end
   end
 
-  # describe 'account_statement' do
-  #   it 'returns the determined date' do
-  #   expect(accountlog.date).to eq Time.mktime(06-12-18)
-  #   end
-  #   it 'shows a clients account statement' do
-  #     account.deposit(100)
-  #     account.withdraw(50)
-  #
-  #     statement = "date || credit || debit || balance\n"\
-  #                 "06-12-18 || 100 ||  || 100\n"\
-  #                 "06-12-18 ||  || 50 || 50\n"
-  #     expect { account.print_log }.to output(statement).to_stdout
-  #   end
-  # end
+  describe 'account_statement' do
+
+    it 'shows a clients account statement' do
+      account.deposit(100)
+      account.withdraw(50)
+
+      statement = "date || credit || debit || balance\n"\
+                  "06-12-18 || 100 ||  || 100\n"\
+                  "06-12-18 ||  || 50 || 50\n"
+      expect(accountlog).to receive(:transaction_log).and_return(statement)
+      expect { account.print_log }.to output(statement).to_stdout
+    end
+  end
 end
