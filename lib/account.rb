@@ -1,29 +1,29 @@
 # frozen_string_literal: true
 
-require_relative 'accountlog'
+require_relative 'account_statement'
 class Account
-  attr_reader :balance, :log_history
-  def initialize(log = Accountlog.new)
+  attr_reader :balance, :statement_history
+  def initialize(statement = AccountStatement.new)
     @balance = 0
-    @log_history = log
+    @statement_history = statement
   end
 
   def deposit(amount)
-    check_integer(amount)
+    check_if_integer(amount)
     greater_than_zero(amount)
     adjust_amount(amount)
-    @log_history.deposit_log(amount, @balance)
+    @statement_history.deposit_statement(amount, @balance)
   end
 
   def withdraw(amount)
-    check_integer(amount)
+    check_if_integer(amount)
     greater_than_zero(amount)
     error_if_amounts_greater_balance(amount)
-    @log_history.withdraw_log(amount, @balance)
+    @statement_history.withdraw_statement(amount, @balance)
   end
 
-  def print_log
-    puts @log_history.transaction_log
+  def print_statement
+    puts @statement_history.transaction_statement
   end
 
 private
@@ -40,7 +40,7 @@ private
     end
   end
 
-  def check_integer(amount)
+  def check_if_integer(amount)
     raise 'Not an integer' unless amount.is_a? Numeric
   end
 

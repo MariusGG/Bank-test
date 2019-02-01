@@ -1,19 +1,13 @@
 # frozen_string_literal: true
 
 require 'account'
-require 'accountlog'
+require 'account_statement'
 
 describe Account do
 
-  let(:log) { double :log, deposit_log: nil, withdraw_log: nil }
-  let(:accountlog) { Accountlog.new }
-  let(:account) { Account.new(accountlog) }
-
-  #
-  # before do
-  # allow(Time).to receive(:now).and_return(Time.mktime(18, 12, 06))
-  # end
-
+  let(:statement) { double :statement, deposit_statement: nil, withdraw_statement: nil }
+  let(:accountstatement) { AccountStatement.new }
+  let(:account) { Account.new(accountstatement) }
 
   describe '#initialize' do
     it 'Has a balance of zero' do
@@ -57,13 +51,13 @@ describe Account do
       end
     end
   end
-  describe 'transaction_log' do
-    it 'keeping a log of transactions' do
+  describe 'transaction_statement' do
+    it 'keeping a statement of transactions' do
       account.deposit(100)
       account.withdraw(50)
-      expect(accountlog.log.length).to eq(2)
-      expect(accountlog.log.first[:credit]).to eq(100)
-      expect(accountlog.log.last[:debit]).to eq(50)
+      expect(accountstatement.statement.length).to eq(2)
+      expect(accountstatement.statement.first[:credit]).to eq(100)
+      expect(accountstatement.statement.last[:debit]).to eq(50)
       expect(account.balance).to eq(50)
     end
   end
@@ -77,8 +71,8 @@ describe Account do
       statement = "date || credit || debit || balance\n"\
                   "06-12-18 || 100 ||  || 100\n"\
                   "06-12-18 ||  || 50 || 50\n"
-      expect(accountlog).to receive(:transaction_log).and_return(statement)
-      expect { account.print_log }.to output(statement).to_stdout
+      expect(accountstatement).to receive(:transaction_statement).and_return(statement)
+      expect { account.print_statement }.to output(statement).to_stdout
     end
   end
 end
